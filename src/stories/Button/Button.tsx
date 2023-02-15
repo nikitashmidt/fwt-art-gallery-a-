@@ -1,4 +1,5 @@
 import './button.scss';
+import {ButtonTemplate as Btn}  from '../ButtonTemplate/ButtonTemplate';
 interface ButtonProps {
   primary?: boolean;
   backgroundColor?: string;
@@ -16,13 +17,13 @@ export const Button =({
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
+    <Btn
+      
     >
-      {label}
-    </button>
+      {/* className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      style={{ backgroundColor }}
+      {...props} */}
+      {/* {label} */}
+    </Btn>
   );
 };
