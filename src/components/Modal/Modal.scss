@@ -1,0 +1,73 @@
+@import '../../styles/variables.scss';
+
+.modal{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    z-index: 17;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: $secondary-white;
+    transition: 0.5s all;
+    opacity: 0;
+    visibility: hidden;
+    &-active{
+        top: 50%;
+        opacity: 1;
+        visibility: visible;
+    }
+    &-image{
+        width: 498px;
+        height: 700px;
+        object-fit: cover;
+    }
+    &-right{
+        padding: 47px; 
+        width: 530px;
+    }
+    &-close{
+        position: absolute;
+        top: 36px;
+        right: 36px;
+        cursor: pointer;
+        transition: 0.4s all;
+        &:hover{
+            transform: scale(1.5);
+        }
+    }
+    &-title{
+        text-align: center;
+        color: $dark-gray;
+        font-family: $font-cormorant;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 100%;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+    &-description{
+        color: $dark-gray;
+        font-weight: 300;
+        font-size: 16px;
+        text-align: center;
+        line-height: 140%;
+        margin-bottom: 61px;
+        a{
+            color: $dark-gray;
+            font-weight: 500;
+        }
+    }
+    
+    &-overlay{  
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        background-color: rgba(3, 3, 3, 0.3);
+        z-index: 15;
+    }
+}
+.noactive{
+    display: none;
+}

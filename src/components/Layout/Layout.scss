@@ -1,0 +1,103 @@
+@import '../../styles/variables.scss';
+
+.layout{
+    transition: 0.5s all;
+}
+.layout.dark{
+    background-color: $primary-black;
+    .header{
+        &-logo{
+            color: $primary-light-gray; 
+        }
+        &-right{
+            &__authorization{
+                color: $primary-light-gray;
+            }
+        }
+    }
+    .content{
+        &-add{
+            span{
+                color: $primary-light-gray;
+                &::before{
+                    background-color: $primary-light-gray;
+                }
+            }
+            svg{
+                path{
+                    fill:$primary-light-gray;
+                }
+            }
+        }
+        &-item{
+            &__block{
+                background-color: $primary-black;
+            }
+            &__info{
+                &::after{
+                    background-color:$accent-gold;
+                }
+            }
+            &__author{
+                color: $primary-light-gray;
+            }
+            &__data{
+                color: $accent-gold;
+            }
+        }
+    }
+    .author{
+        &-back{
+            span{
+                color: $primary-light-gray;
+                svg{
+                    path{
+                        fill: $primary-light-gray;  
+                    }
+                }
+            }
+        }
+        &-block{
+            &__info{
+                background-color: $primary-black;
+            }
+            &__date, &__country{
+                color: $secondary-gray;
+            }
+            &__title{
+                color: $accent-gold;
+                &::before{
+                    background-color: $accent-gold;
+                }
+            }
+            &__divider{
+                background-color: $primary-light-gray;
+            }
+            &__descr{
+                color: $primary-light-gray;
+            }
+            &__readmore{
+                color: $primary-light-gray;
+                svg{
+                    path{
+                        fill: $primary-light-gray;
+                    }
+                }
+            }
+            &__genre{
+                border: 1px solid $primary-white;
+                color: $primary-light-gray; 
+            }
+        }
+        &-title{
+            color: $accent-gold;
+        }
+    }
+    .footer{
+        &-social{
+            path{
+                fill: $primary-light-gray;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+
+@import '../../styles/variables.scss';
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #9C9C9C;
+    padding: 40px 100px;
+    &-info{
+        font-family: $font-inter;
+        font-weight: 300;
+        &__description{
+            width: 485px;
+            font-size: 16px;    
+            color: $dark-gray;
+            line-height: 140%;
+        }
+        &__company{
+            font-weight: 500;
+            color: $dark-gray;
+        }
+        &__author{
+            font-weight: 300;
+            color: $secondary-gray;
+        }
+    }
+    &-social{
+        display: flex;
+        gap: 20px;
+    }
+}

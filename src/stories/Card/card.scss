@@ -1,0 +1,115 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/media.scss';
+
+.card{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  list-style-type: none;
+  width: 392px;
+  height: 260px;
+  &-dark{
+    .card{
+      &-block{
+        background-color: $primary-black;
+      }
+      &-info{
+        color:  $accent-gold;
+        &::after{
+          background-color: $accent-gold;
+        }
+      }
+      &-date{
+        color: $accent-gold;
+      }
+      &-name{
+        color: $primary-white;
+      }
+    }
+  }
+  &--small{
+    .card{
+      &-block{
+        padding: 8px;
+      }
+      &-arrow{
+        opacity: 1;
+      }
+    }
+  }
+  &--medium{
+    .card{
+      &-block{
+        padding: 12px;
+      }
+      &-arrow{
+          opacity: 1;
+      }
+    }
+
+  }
+ 
+  @include mini-desktop{
+    &:hover{
+      .card-images{
+          transform: scale(1.1);
+      }
+      .card-arrow{
+          opacity: 1;
+      }
+    }
+  }
+  &-images{
+    transition: 0.5s all;
+  }
+  &-block{
+      position: absolute;
+      width: 70%;
+      padding: 20px;
+      background-color: $primary-white;
+      z-index: 10;
+      bottom: 0px;
+  }
+  &-info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    &::after{
+        content: '';
+        background-color: $accent-red;
+        position: absolute;
+        width: 2px;
+        left: -20px;
+        height: 100%;
+    }
+  }
+  &-name{
+    font-family: $font-cormorant;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: $primary-black;
+  }
+  &-date{
+    font-family: $font-inter;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $accent-red;
+  }
+  &-arrow{
+    position: absolute;
+    top: 0;
+    right: -24px;
+    width: 24px;
+    height: 100%;
+    @include flex-all-center;
+    background-color: $accent-red;
+    opacity: 0;
+    transition: 0.5s all;
+  }
+}
