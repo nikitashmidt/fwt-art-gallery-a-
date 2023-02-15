@@ -7,7 +7,6 @@ import {FormLogin, FormSignUp} from '../Forms/';
 
 
 const Modal = ({openModalProp, setOpenModalProp, value, setValue}: IPropsModal) => {
-    console.log(value)
     return(
         <>
             <div className={cn('modal', {'modal-active': !openModalProp})}>

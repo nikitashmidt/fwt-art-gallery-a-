@@ -1,29 +1,28 @@
 import './button.scss';
-import {ButtonTemplate as Btn}  from '../ButtonTemplate/ButtonTemplate';
+import {ButtonTemplate as Btn}  from '../ButtonDefaultTemplate/ButtonDefault';
+
 interface ButtonProps {
-  primary?: boolean;
   backgroundColor?: string;
-  size?: 'small' | 'medium' | 'large';
   label: string;
   onClick?: () => void;
+  isDark: boolean,
+  isDisabled: boolean
 }
 
 export const Button =({
-  primary = false,
-  size = 'medium',
   backgroundColor,
   label,
-  ...props
+  isDark,
+  isDisabled,
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <Btn
-      
+      className={'button'} 
+      label={label}
+      backgroundColor={backgroundColor}
+      isDark={isDark}
+      isDisabled={isDisabled}
     >
-      {/* className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props} */}
-      {/* {label} */}
     </Btn>
   );
 };
