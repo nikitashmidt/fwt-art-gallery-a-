@@ -14,7 +14,7 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = ({onClick, isDark, isOutlined, children, isFilled, isDisabled, className, ...other}:IButtonProps) => {
     return(
         <button 
-            className={cn(className,
+            className={cn(className, 'button',
                 {'button--dark' : isDark}, 
                 {'button--filled':isFilled},
                 {'button--outlined': isOutlined},
