@@ -1,4 +1,4 @@
-import './grid.scss';
+import './Grid.scss';
 import cn  from 'classnames';
 interface IPropsGrid {
   artists: string[]

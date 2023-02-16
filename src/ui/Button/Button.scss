@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.button {
+  padding: 16px 75px;
+  font-family: $font-inter;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $primary-white;
+  background-color: $primary-black;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.5s all;
+  &:not(.button--disabled){
+    &:hover, &:focus{
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      }
+  }
+  &--dark{
+    background-color: $accent-gold;
+    &:hover{
+        color: $primary-white;
+    }
+  } 
+  &--disabled{
+    opacity: 0.5;
+    cursor: default;
+  }
+  &--outlined{  
+    background-color: transparent;
+    outline: 1px solid $dark-gray;
+    color: $dark-gray;
+  }
+  &--filled{
+      background-color: $primary-black;
+  }
+  &-trash{
+    background-color: $primary-white;
+    padding: 6px;   
+    border-radius: 4px;
+  }
+}
+
+
