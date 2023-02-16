@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Grid } from './Grid';
+import Grid  from '../ui/Grid/';
 
 export default {
   title: 'Example/Grid',

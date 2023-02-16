@@ -1,4 +1,4 @@
-import './card.scss';
+import './Сard.scss';
 import cn  from 'classnames';
 import author from '../../resources/author.png';
 import arrow from '../../resources/arrow.svg';
@@ -33,4 +33,3 @@ export const Card = ({name, thumbnail, dateFirst, dateSecond, onClick, isDark, s
     </li>
   );
 };
-// className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
